@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { ProfileContainer, Description, Stats, EachStat } from "./profile.styled";
 
 
+
 export const Profile = ({ username, tag, location, avatar, stats }) => {
     return (
         <ProfileContainer>
@@ -10,7 +11,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
                 <img
                     src={avatar}
                     alt="User avatar" />
-                <p>{username}</p>
+                <p><b>{username}</b></p>
                 <p>@{tag}</p>
                 <p>{location}</p>
             </Description>
@@ -39,8 +40,8 @@ Profile.prototype = {
     location:PropTypes.string.isRequired,
     avatar:PropTypes.string.isRequired,
         stats:PropTypes.exact({
-            followers:PropTypes.number.isReqired,
-            views:PropTypes.number.isReqired,
-            likes:PropTypes.number.isReqired,
+            followers:PropTypes.number.isRequired,
+            views:PropTypes.number.isRequired,
+            likes:PropTypes.number.isRequired,
     })
 }
