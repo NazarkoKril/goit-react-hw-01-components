@@ -5,6 +5,8 @@ import { Profile } from './components/Profile/Profile.jsx';
 import user from './components/Profile/user.json';
 import data from './components/Statistics/data.json';
 import { Statistics } from 'components/Statistics/Statistics.jsx';
+import { TransactionsHistory } from 'components/TransactionsHistory/TransactionsHistory.jsx';
+import items from './components/TransactionsHistory/items.json';
 
 export const App = () => {
 	return (
@@ -18,7 +20,7 @@ export const App = () => {
 			/>
 			<Statistics data={data} />
 			<FriendList friends={friends} />
-			{/* <TransactionsHistory items={items}/> */}
+			<TransactionsHistory items={items} />
 		</Container>
 	);
 };
